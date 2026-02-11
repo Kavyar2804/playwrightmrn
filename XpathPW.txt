@@ -1,0 +1,92 @@
+
+<html>
+  <body>
+    <div class="container">
+      <h1>Welcome</h1>
+      <div class="form">
+        <label>Email</label>
+        <input type="text" name="email">
+        <button id="login">Login</button>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+html
+ └─ body
+     └─ div.container
+         ├─ h1
+         └─ div.form
+             ├─ label
+             ├─ input[name=email]
+             └─ button#login
+
+
+
+Xpath
+
+1. Absolute xpath /html/body/div/div/input  /rootTagName/targetNodeTagName
+
+absolute xpath
+/html/body/div[1]/div/div[2]/section/main/section/article[1]/aside/article/aside[2]/div/div/form/div[1]/input
+
+2. Relative xpath //
+
+-------------------------------------------------------->with attributes
+//tagname[@Attributename='Attributevalue'] 
+//input[@id='name']
+//input[@placeholder="Enter your name"]
+
+//input[@type="email"]
+
+-------------------------------------------------------->with multiple  attributes
+//tagname[@Attributename='Attributevalue' and @Attributename='Attributevalue'] 
+
+//tagname[@Attributename='Attributevalue' or @Attributename='Attributevalue'] 
+
+------------------------------------------------------->with visible text
+
+//tagname[text()='textvalue']
+//button[text()='Register']
+
+
+To locate partial dynamic element
+
+Contains function
+
+//tagname[contains(text(), 'textvalue')]
+	
+//h3[contains(text(), 'iphone 13')]
+
+To locate completely dynamic element
+
+By traversing, ancestor, descendant
+
+to go to immediate parent 
+
+/parent::tagname or '/..'
+
+from child to go any parent 
+/ancestor::tag
+
+to go to immediate child '/tagname'
+
+to go to any child from parent '//tagname'  /descendant::tag
+
+Siblings
+
+following sibling 
+
+/following-sibling::tag
+
+preceding-sibling
+
+/preceding-sibling::tag
+
+group by index
+(xpath)[index]
+
+
+
+
